@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from './components/NavBar/NavBar';
+import MusicTable from './components/MusicTable/MusicTable';
 
 function App() {
 
@@ -17,7 +19,8 @@ function App() {
 
   return (
     <div className="App">
-
+      <NavBar />
+      <MusicTable songsArray={songs}/>
     </div>
   );
 }
