@@ -18,10 +18,15 @@ function App() {
     setSongs(response.data);
   }
 
+  function AddNewSongs(newSong) {
+    let tempSongs = [...songs, newSong];
+    setSongs(tempSongs);
+  }
+
   return (
     <div className="App">
       <NavBar />
-      <NewSongForm />
+      <NewSongForm addNewSong={AddNewSongs}/>
       <MusicTable songsArray={songs}/>
     </div>
   );
