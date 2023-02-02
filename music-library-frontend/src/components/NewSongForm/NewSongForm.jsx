@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const NewSongForm = (props) => {
 
+    const [newSong, setNewSong] = useState({})
     const [newSongTitle, setNewSongTitle] = useState('');
     const [newSongArtist, setNewSongArtist] = useState('');
     const [newSongAlbum, setNewSongAlbum] = useState('');
@@ -18,7 +19,7 @@ const NewSongForm = (props) => {
             genre: newSongGenre
         }
         console.log(newSong); // Console logged for debugging/testing purposes
-        props.addNewSong(newSong);
+        props.addNewSong('http://127.0.0.1:8000/api/music/', newSong);
         setNewSongTitle('');
         setNewSongArtist('');
         setNewSongAlbum('');
