@@ -20,14 +20,15 @@ function App() {
 
   async function PostNewSong(url, body) {
     const response = await axios.post(url, body);
-    console.log(response.data);
-    setSongs(response.data)
+    console.log(response.data); // Console logged for debugging/testing purposes
+    const tempSongsArray = [...songs, response.data];
+    setSongs(tempSongsArray);
   }
 
   return (
     <div className="App">
       <NavBar />
-      <NewSongForm addNewSong={PostNewSong}/>
+      <NewSongForm addNewSong={PostNewSong} />
       <MusicTable songsArray={songs}/>
     </div>
   );
