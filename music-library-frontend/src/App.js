@@ -25,11 +25,12 @@ function App() {
     setSongs(tempSongsArray);
   }
 
-  async function deleteSong(id) {
+  async function DeleteSong(id) {
     try {
         const response = await axios.delete(`http://127.0.0.1:8000/api/music/${id}/`);
         console.log(response.status, response.statusText);
         console.log('Song successfully deleted!');
+        GetAllSongs();
     }
     catch (error) {
         alert(error);
@@ -40,7 +41,7 @@ function App() {
     <div className="App">
       <NavBar />
       <NewSongForm addNewSong={PostNewSong} />
-      <MusicTable songsArray={songs} removeSong={deleteSong}/>
+      <MusicTable songsArray={songs} removeSong={DeleteSong}/>
     </div>
   );
 }
