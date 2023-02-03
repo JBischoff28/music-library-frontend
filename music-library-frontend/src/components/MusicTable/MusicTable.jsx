@@ -1,6 +1,14 @@
 
 const MusicTable = (props) => {
-    
+
+    function ConfirmDeletion(id) {
+        let userRes = prompt("Are your sure?\nDeleting this song cannot be undone!\nEnter Yes or No");
+        if (userRes === 'y' || userRes === 'yes' || userRes === 'Yes' || userRes === 'Y' || userRes === 'YES') {
+            props.removeSong(id);
+        }
+        else {}
+    }
+
     return ( 
         <table>
             <thead>
@@ -21,6 +29,7 @@ const MusicTable = (props) => {
                         <td>{song.album}</td>
                         <td>{song.release_date}</td>
                         <td>{song.genre}</td>
+                        <td><button type='submit' onClick={() => ConfirmDeletion(song.id)}>DELETE</button></td>
                     </tr>
                     )
                 )}
