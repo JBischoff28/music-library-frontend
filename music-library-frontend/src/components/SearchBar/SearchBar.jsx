@@ -13,12 +13,12 @@ const SearchBar = (props) => {
 
     function handleReset(event) {
         event.preventDefault();
-        props.resetSearch([props.resetSearchVar])
+        props.resetSearch();
     }
 
     return ( 
         <form onSubmit={(event) => {handleSearch(event)}}>
-            <label>Search:</label>
+            <label>Search: </label>
             <input type='text' placeholder='search music' value={search} 
             onChange={(event) => setSearch(event.target.value)}/>
             <button type='submit'>Go</button>

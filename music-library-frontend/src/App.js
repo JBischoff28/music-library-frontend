@@ -57,9 +57,9 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar resetSearch={setSongs} resetSearchVar={songs}/>
+      <NavBar />
       <NewSongForm addNewSong={PostNewSong} />
-      <SearchBar searchFunc={SearchSong}/>
+      <SearchBar searchFunc={SearchSong} resetSearch={GetAllSongs}/>
       <MusicTable songsArray={songs} removeSong={DeleteSong} />
     </div>
   );
