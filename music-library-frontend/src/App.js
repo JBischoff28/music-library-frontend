@@ -3,6 +3,7 @@ import axios from 'axios';
 import NavBar from './components/NavBar/NavBar';
 import MusicTable from './components/MusicTable/MusicTable';
 import NewSongForm from './components/NewSongForm/NewSongForm';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
 
@@ -37,11 +38,29 @@ function App() {
     }
 }
 
+  function SearchSong(search) {
+    let searchRes;
+    searchRes = songs.filter((el) => {
+      if (el.title.includes(search) || el.artist.includes(search) || el.album.includes(search)
+      || el.release_date.includes(search) || el.genre.includes(search)) {
+          console.log(searchRes);
+          return true;
+      }
+      else {
+          return false;
+      }
+    });
+    setSongs(searchRes);
+  }
+
+
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar resetSearch={setSongs} resetSearchVar={songs}/>
       <NewSongForm addNewSong={PostNewSong} />
-      <MusicTable songsArray={songs} removeSong={DeleteSong}/>
+      <SearchBar searchFunc={SearchSong}/>
+      <MusicTable songsArray={songs} removeSong={DeleteSong} />
     </div>
   );
 }
