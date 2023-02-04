@@ -1,7 +1,12 @@
 
 const NavBar = (props) => {
+
     return ( 
-        <h1>App Name Here</h1>
+        <div className="navContainer">
+            <div className="navTex">
+                <h1>~~ Music Library ~~</h1>
+            </div>
+        </div>
      );
 }
  

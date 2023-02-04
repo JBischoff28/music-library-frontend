@@ -17,7 +17,7 @@ const SearchBar = (props) => {
     }
 
     return ( 
-        <form onSubmit={(event) => {handleSearch(event)}}>
+        <form onSubmit={(event) => {handleSearch(event)}} id='searchBox'>
             <label>Search: </label>
             <input type='text' placeholder='search music' value={search} 
             onChange={(event) => setSearch(event.target.value)}/>

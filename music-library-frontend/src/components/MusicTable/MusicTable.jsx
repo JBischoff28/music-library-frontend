@@ -10,7 +10,7 @@ const MusicTable = (props) => {
     }
 
     return ( 
-        <table>
+        <table className='table'>
             <thead>
                 <tr>
                     <th>Title</th>
@@ -23,7 +23,7 @@ const MusicTable = (props) => {
             <tbody>
                 {props.songsArray.map((song, index) =>
                     (
-                    <tr key={index}>
+                    <tr key={index} >
                         <td>{song.title}</td>
                         <td>{song.artist}</td>
                         <td>{song.album}</td>

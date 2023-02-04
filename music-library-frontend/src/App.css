@@ -1,0 +1,73 @@
+.container-fluid {
+    background-image: url('/public/background-img.jpg');
+    background-size: 75em 80em;
+    display: grid;
+    justify-content: center;
+}
+
+.navContainer {
+    background-color: rgba(212, 212, 212, 0.575);
+    padding: 1em;
+    padding-bottom: 1.5em;
+    margin-bottom: 1em;
+    display: grid;
+    justify-content: center;
+}
+
+#border-box {
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(196, 194, 194);
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+    width: 45em;
+    border-radius: 1em;
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+}
+
+#border-box2 {
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(196, 194, 194);
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+    width: 65em;
+    border-radius: 1em;
+    display: grid;
+    justify-content: center;
+}
+
+.formText {
+    display: flex;
+    justify-content: center;
+}
+
+#formButton {
+    align-self: center;
+}
+
+.form-group6 {
+    justify-content: center;
+}
+
+.form-control {
+    margin: 0.5em;
+}
+
+#searchBox {
+    margin-bottom: 2em;
+    float: right;
+}
+
+#searchBox button {
+    margin: 0.5em;
+}
+
+td {
+    text-align: center;
+    padding: 1em;
+}

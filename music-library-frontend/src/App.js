@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import MusicTable from './components/MusicTable/MusicTable';
 import NewSongForm from './components/NewSongForm/NewSongForm';
 import SearchBar from './components/SearchBar/SearchBar';
+import './App.css';
 
 function App() {
 
@@ -56,11 +57,19 @@ function App() {
 
 
   return (
-    <div className="App">
-      <NavBar />
-      <NewSongForm addNewSong={PostNewSong} />
-      <SearchBar searchFunc={SearchSong} resetSearch={GetAllSongs}/>
-      <MusicTable songsArray={songs} removeSong={DeleteSong} />
+    <div className="container-fluid">
+      <div className='row'>
+        <NavBar />
+      </div>
+      <div className='d-flex flex-column'  id='border-box'>
+        <NewSongForm addNewSong={PostNewSong} />
+      </div>
+      <div id='border-box2'>
+        <div>
+          <SearchBar searchFunc={SearchSong} resetSearch={GetAllSongs}/>
+        </div>
+        <MusicTable songsArray={songs} removeSong={DeleteSong} />
+      </div>
     </div>
   );
 }

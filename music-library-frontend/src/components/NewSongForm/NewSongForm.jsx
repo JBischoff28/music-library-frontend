@@ -27,32 +27,32 @@ const NewSongForm = (props) => {
     }
 
     return ( 
-        <form onSubmit={(event) => handleSubmit(event)}>
-            <div>
+        <form onSubmit={(event) => handleSubmit(event)} className='form-grid'>
+            <div className='formText'>
                 <h3>Add New Song</h3>
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Title: </label>
-                <input type='text' value={newSongTitle} onChange={(event) => setNewSongTitle(event.target.value)} />
+                <input className='form-control' type='text' value={newSongTitle} onChange={(event) => setNewSongTitle(event.target.value)} />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Artist: </label>
-                <input type='text' value={newSongArtist} onChange={(event) => setNewSongArtist(event.target.value)} />
+                <input className='form-control' type='text' value={newSongArtist} onChange={(event) => setNewSongArtist(event.target.value)} />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Album: </label>
-                <input type='text' value={newSongAlbum} onChange={(event) => setNewSongAlbum(event.target.value)} />
+                <input className='form-control' type='text' value={newSongAlbum} onChange={(event) => setNewSongAlbum(event.target.value)} />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Release Date: </label>
-                <input type='date' value={newSongRelease} onChange={(event) => setNewSongRelease(event.target.value)} />
+                <input className='form-control' type='date' value={newSongRelease} onChange={(event) => setNewSongRelease(event.target.value)} />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Genre: </label>
-                <input type='text' value={newSongGenre} onChange={(event) => setNewSongGenre(event.target.value)} />
+                <input className='form-control' type='text' value={newSongGenre} onChange={(event) => setNewSongGenre(event.target.value)} />
             </div>
-            <div>
-                <button type='submit'>Add Song</button>
+            <div className='form-group6'>
+                <button className='form-control' type='submit' id='formButton'>Add Song</button>
             </div>
         </form>
      );
